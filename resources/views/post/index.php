@@ -26,7 +26,11 @@
                 <td><?php echo $post->details; ?></td>
                 <td>
                     <a href="<?php echo url('post/edit',$post->id)?>">Edit</a> |
-                    <a href="">Delete</a>
+                    <form action="<?php echo url('post/delete',$post->id) ?>" method="post">
+                        <?php echo csrf_field();?>
+                        <input type="hidden" name="_method" value="delete">
+                        <button>delete</button>
+                    </form>
                 </td>
             </tr>
         <?php }?>
