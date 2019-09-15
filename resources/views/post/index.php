@@ -8,8 +8,11 @@
     <title>List of posts</title>
 </head>
 <body>
+<hr>
+<a href="<?php echo url('post/create')?>">Create New Post</a>
+<hr>
     <h1>List of Posts</h1>
-    <table border="1" width="300px">
+    <table border="1">
         <tr>
             <th>Id</th>
             <th>Title</th>
@@ -21,6 +24,10 @@
                 <td><?php echo $post->id; ?></td>
                 <td><?php echo $post->title; ?></td>
                 <td><?php echo $post->details; ?></td>
+                <td>
+                    <a href="<?php echo url('post/edit',$post->id)?>">Edit</a> |
+                    <a href="">Delete</a>
+                </td>
             </tr>
         <?php }?>
     </table>

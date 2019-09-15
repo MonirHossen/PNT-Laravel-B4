@@ -8,6 +8,9 @@
     <title>Create Post</title>
 </head>
 <body>
+<hr>
+<a href="<?php echo url('post/index')?>">View Post</a>
+<hr>
 <form action="<?php echo url('post/store')?>" method="post">
     <?php echo csrf_field(); ?>
         <table>

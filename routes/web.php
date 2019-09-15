@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('post/create','PostController@create');
 Route::post('post/store','PostController@store');
 Route::get('post/index','PostController@index');
+Route::get('post/edit/{id}','PostController@edit');
+Route::post('post/update/{id}','PostController@update');
