@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
+    public function index(){
+        $data['posts'] =  DB::table('posts')->get();
+        return view('post/index',$data);
+    }
    public function create(){
         return view('post/create');
    }
