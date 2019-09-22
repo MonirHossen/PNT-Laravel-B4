@@ -34,12 +34,12 @@ class PostController extends Controller
         $data['title']   = $request->title;
         $data['details'] = $request->details;
         DB::table('posts')->where('id',$id)->update($data);
-        return redirect('post/index');
+        return redirect('posts');
 
    }
 
    public function delete($id){
         DB::table('posts')->where('id',$id)->delete();
-        return redirect('post/index');
+        return redirect('posts');
    }
 }
